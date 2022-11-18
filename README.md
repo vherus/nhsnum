@@ -1,6 +1,6 @@
 ## First pass, more work to come
 
-Inputs: 10 single digit ints - is this a string of ints or single 10 digit int?
+Inputs: 10 single digit ints - is this a string of ints or single 10 digit int? More likely a string in case of starting with 0
 
 Ouputs: bool (valid / not), or void / throw
 
