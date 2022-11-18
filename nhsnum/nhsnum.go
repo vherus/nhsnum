@@ -9,7 +9,6 @@ import (
 func IsValid(num string) bool {
 	digits := strings.Split(num, "")
 	length := len(digits)
-	maxFactor := 10
 
 	total := 0
 	for i := 0; i < length-1; i++ {
@@ -19,7 +18,7 @@ func IsValid(num string) bool {
 			panic(err)
 		}
 
-		factor := maxFactor - i
+		factor := length - i
 		total += num * factor
 	}
 
