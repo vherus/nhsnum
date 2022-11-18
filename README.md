@@ -20,7 +20,7 @@ _|_ | NHS Number is invalid | false
 **Option 2: bool output, int input**
 Function | Input | Scenario | Output
 -------- | ----- | -------- | ------
-nhsnum.IsValid | int32 | NHS Number is valid | true
+nhsnum.IsValid | int | NHS Number is valid | true
 _|_ | NHS Number is invalid | false
 
 **Option 3: error, string input**
@@ -32,7 +32,7 @@ _|_ | NHS Number is invalid | panic
 **Option 4: error, int input**
 Function | Input | Scenario | Output
 -------- | ----- | -------- | ------
-nhsnum.Validate | int32 | NHS Number is valid | void
+nhsnum.Validate | int | NHS Number is valid | void
 _|_ | NHS Number is invalid | panic
 
 I'll go with boolean outputs and implement both string & int versions. In other languages I would prefer to void / throw an error so any existing error handler could take care of the fail case, not sure how to accomplish that in Go.
