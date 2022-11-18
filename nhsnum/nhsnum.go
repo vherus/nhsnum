@@ -21,11 +21,7 @@ func IsValid(num string) bool {
 		return true
 	}
 
-	if providedCheckNum == 0 && calcedCheckNum == 11 {
-		return true
-	}
-
-	return false
+	return providedCheckNum == 0 && calcedCheckNum == 11
 }
 
 func calculateTotal(nums []string) int {
