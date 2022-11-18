@@ -13,7 +13,8 @@ func IsValid(num string) bool {
 	total := calculateTotal(digits)
 
 	remainder := total % 11
-	providedCheckNum, _ := strconv.Atoi(digits[length-1])
+	providedCheckNum := strDigitToInt(digits[length-1])
+
 	calcedCheckNum := 11 - remainder
 
 	// providedCheckNum is always going to be a single digit, no need to explicitly
@@ -34,15 +35,21 @@ func calculateTotal(nums []string) int {
 	total := 0
 
 	for i := 0; i < length-1; i++ {
-		num, err := strconv.Atoi(nums[i])
-
-		if err != nil {
-			panic(err)
-		}
+		num := strDigitToInt(nums[i])
 
 		factor := length - i
 		total += num * factor
 	}
 
 	return total
+}
+
+func strDigitToInt(digit string) int {
+	num, err := strconv.Atoi(digit)
+
+	if err != nil {
+		panic(err)
+	}
+
+	return num
 }
