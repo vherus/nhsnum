@@ -30,7 +30,7 @@ func IsValid(num string) bool {
 		return true
 	}
 
-	if providedCheckNum == 0 && calcedCheckNum == 1 {
+	if providedCheckNum == 0 && calcedCheckNum == 11 {
 		return true
 	}
 
