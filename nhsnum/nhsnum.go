@@ -16,6 +16,8 @@ func IsValid(num string) bool {
 	providedCheckNum, _ := strconv.Atoi(digits[length-1])
 	calcedCheckNum := 11 - remainder
 
+	// providedCheckNum is always going to be a single digit, no need to explicitly
+	// check if calcedCheckNum is 10. The default will catch that scenario
 	if providedCheckNum == calcedCheckNum {
 		return true
 	}
