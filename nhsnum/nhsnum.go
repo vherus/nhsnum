@@ -21,6 +21,7 @@ func IsValid(num string) bool {
 		return true
 	}
 
+	// 11 is a magic number but I'm not sure what the terminology for it is or I'd create a variable
 	return providedCheckNum == 0 && calcedCheckNum == 11
 }
 
