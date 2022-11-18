@@ -5,7 +5,6 @@ import (
 	"strings"
 )
 
-// first pass logic, todo: refactor
 func IsValid(num string) bool {
 	digits := strings.Split(num, "")
 	length := len(digits)
