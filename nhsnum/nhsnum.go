@@ -11,8 +11,8 @@ func IsValid(num string) bool {
 	length := len(digits)
 
 	total := calculateTotal(digits)
-	remainder := total % 11
 	providedCheckNum := strDigitToInt(digits[length-1])
+	remainder := total % 11
 	calcedCheckNum := 11 - remainder
 
 	// providedCheckNum is always going to be a single digit, no need to explicitly
